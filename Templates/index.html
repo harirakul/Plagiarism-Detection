@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<title>Plagiarism Detector</title>
+<style>
+button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: blue;
+}
+textarea {
+  width: 500px;
+  height: 150px;
+  font-size: 11px;
+}
+</style>
+<body>
+
+<h2>Plagiarism Detector</h2>
+
+<form action="/report" method="POST">
+  <label>Paste your text here:</label><br>
+  <textarea for="fname" name='text' rows="2"></textarea>
+  <br>
+  <button type="Submit" value="Send">Generate Report</button>
+</form> 
+
+<p>You will be redirected once your report is generated.</p>
+
+<p>Time to generate report depends on length of text.</p>
+
+</body>
+</html>
