@@ -16,10 +16,10 @@ def hello_world():
 
 
 @app.route("/report", methods=["POST", "GET"])
-def result() -> similarity.returnTable:
+def result() -> similarity.return_table:
     if request.method == "POST":
         result = request.form["text"]
-        return similarity.returnTable(similarity.report(str(result)))
+        return similarity.return_table(similarity.report(str(result)))
     return None
 
 
