@@ -1,5 +1,9 @@
 # Plagiarism Detection with Python
 
+![main page preview](images/main.png)
+
+![similarity page preview](images/similarity.png)
+
 Finds percentage similarity between inputted text and relevant articles on the web.
 
 ## How to install?
