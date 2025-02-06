@@ -62,10 +62,6 @@ def search(query: str, num: int) -> list[str]:
 
 def extract_text(url: str) -> str:
     """Extract text from url."""
-    try:
-        page = requests.get(url, timeout=40)
-        soup = BeautifulSoup(page.text, "html.parser")
-        return soup.get_text()
-    except Exception as e:
-        logger.error(e)
-        return ""
+    page = requests.get(url, timeout=40)
+    soup = BeautifulSoup(page.text, "html.parser")
+    return soup.get_text()

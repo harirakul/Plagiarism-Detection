@@ -20,7 +20,9 @@ def main_page() -> str:
 def report_page() -> str:
     """Render and return report page."""
     result = request.form["text"]
-    return render_template("report.html") + similarity.return_table(similarity.report(str(result)))
+    return render_template("report.html") + similarity.return_table(
+        similarity.report(str(result)),
+    )
 
 
 if __name__ == "__main__":
