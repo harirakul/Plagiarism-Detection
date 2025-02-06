@@ -23,6 +23,10 @@ python3 -m venv venv
 pip install -r requirements.txt
 ```
 
+4. Rename `.env.dist` to `.env`.
+
+> For better work you need fill `COOKIE` in `.env`. You can grab on dev tools in your browser.
+
 4. Start web-app:
 
 ```

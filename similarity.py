@@ -35,7 +35,8 @@ def report(text: str):
 
     for i in range(len(matching_sites)):
         matches[matching_sites[i]] = similarity(
-            text, websearch.extract_text(matching_sites[i])
+            text,
+            websearch.extract_text(matching_sites[i]),
         )
 
     matches = {
