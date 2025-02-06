@@ -11,16 +11,16 @@ app = Flask(__name__, template_folder="Templates")
 
 
 @app.route("/", methods=["GET", "POST"])
-def hello_world():
+def main_page() -> str:
+    """Render and return main page."""
     return render_template("index.html")
 
 
 @app.route("/report", methods=["POST", "GET"])
-def result() -> similarity.return_table:
-    if request.method == "POST":
-        result = request.form["text"]
-        return similarity.return_table(similarity.report(str(result)))
-    return None
+def report_page() -> str:
+    """Render and return report page."""
+    result = request.form["text"]
+    return render_template("report.html") + similarity.return_table(similarity.report(str(result)))
 
 
 if __name__ == "__main__":
