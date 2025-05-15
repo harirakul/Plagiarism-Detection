@@ -2,38 +2,72 @@
 <html>
 <title>Plagiarism Detector</title>
 <style>
-button {
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  background-color: blue;
-}
-textarea {
-  width: 500px;
-  height: 150px;
-  font-size: 11px;
-}
+    body {
+        color: white;
+        background-color: #181616;
+        padding: 20px;
+    }
+    button {
+        width: 100%;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        background-color: #3c82f9;
+        border-radius: 15px;
+    }
+    textarea {
+        color: white;
+        background-color: #1d1b1b;
+        min-width: 500px;
+        width: 100%;
+        min-height: 300px;
+        height: 40%;
+        font-size: 11px;
+        resize: none;
+        border-radius: 15px;
+    }
+    .center {
+        background-color:#1d1b1b;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 auto;
+        max-width: 800px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+    }
+    @media (max-width: 600px) {
+        .center {
+            width: 90%;
+        }
+    }
 </style>
 <body>
+    <br>
+    <div class="center">
+        <h2>Plagiarism Detector</h2>
 
-<h2>Plagiarism Detector</h2>
+        <form action="/report" method="POST">
+        <p>Paste your text here:</p><br>
+        <textarea for="fname" name="text"></textarea>
+        <br>
+        <button type="Submit" value="Send">Generate Report</button>
+        </form> 
 
-<form action="/report" method="POST">
-  <label>Paste your text here:</label><br>
-  <textarea for="fname" name='text' rows="2"></textarea>
-  <br>
-  <button type="Submit" value="Send">Generate Report</button>
-</form> 
+        <br>
 
-<p>You will be redirected once your report is generated.</p>
-
-<p>Time to generate report depends on length of text.</p>
-
+        <div class="center">
+        <p>You will be redirected once your report is generated.</p>
+        <p>Time to generate report depends on length of text.</p>
+        </div>
+    </div>
 </body>
 </html>
